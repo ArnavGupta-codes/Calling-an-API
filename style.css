@@ -1,23 +1,26 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height:40vh;
+    height: auto;
 }
 
 .form {
@@ -26,21 +29,25 @@ body {
     background-color: skyblue;
     padding: 15px;
     border-radius: 10px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
 }
-
 .search_bar {
-    width: 1000px;
-    height: 100px;
-    padding: 15px; 
-    font-size: 60px;
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    padding: 10px;
+    font-size: 24px;
     border-radius: 15px;
     border: solid black;
 }
 
 
 .submit_button {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: white;
     margin-left: 10px;
@@ -49,26 +56,106 @@ body {
     justify-content: center;
     align-items: center;
     border: solid black;
-     /* transition: background-color 0.3s ease, transform 0.2s ease; Searched on net for this line */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit_button i {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .submit_button:hover {
     background-color: black;
+    color: white;
+}
+.info {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    border: 5px solid skyblue;
+    border-radius: 4px;
 }
 
-.info{
-    width:auto;
-    flex:none;
-    align-items: center;
-    
-    padding: 20px;
-    color:white;
-    padding:20px;
-    margin-top:20px;
-    width:80%;
-    text-align: center;
+#info a{
+    color: orange;
+}
+
+#info a:hover{
+    color: red;
+}
+
+/* ************************************ */
+/* HAD TO TAKE THIS ANIMATION BELOW CODE FROM A WEBSITE */
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px skyblue;
+    transform-origin: top left;
+    overflow:hidden;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+            animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: skyblue;
+  }
+  .cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  
+  @-webkit-keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+
+.cube {
+    position: fixed;
 }
