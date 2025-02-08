@@ -32,6 +32,7 @@ async function searchUser() {
 }
 
 //Also tried this but this will not Work!!
+// As it has some error: mainly using info.innerHTML, I had to use reponse.ok, response.status, info
 /*
 async function searchUser() {
   event.preventDefault(); 
